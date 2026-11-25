@@ -1,6 +1,5 @@
 package com.example;
-
-import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.@DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
@@ -12,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @ExtendWith(MockitoExtension.class)
-public class AlexTest {
+public class    AlexTest {
 
     @Mock
     private Feline feline;

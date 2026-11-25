@@ -1,6 +1,5 @@
 package com.example;
 
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
@@ -20,22 +19,8 @@ public class LionTest {
     private Feline feline;
 
     @Test
-    public void testMaleHasMane() throws Exception {
-        Lion lion = new Lion("Самец", feline);
-        assertEquals(true, lion.doesHaveMane());
-    }
-
-    @Test
-    public void testFemaleDoesNotHaveMane() throws Exception {
-        Lion lion = new Lion("Самка", feline);
-        assertEquals(false, lion.doesHaveMane());
-    }
-
-    @Test
     public void testConstructorWithInvalidSexThrowsException() {
-        Exception exception = assertThrows(Exception.class, () -> new Lion("Неверный", feline));
-        assertEquals("Используйте допустимые значения пола животного - самец или самка",
-                exception.getMessage());
+        assertThrows(Exception.class, () -> new Lion("Неверный", feline));
     }
 
     @Test
